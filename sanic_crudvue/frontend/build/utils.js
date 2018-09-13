@@ -28,7 +28,7 @@ function genLoaders(lang) {
     return loaders;
 }
 
-exports.styleLoaders = function() {
+exports.styleLoaders = function () {
     var output = [];
     cssLang.forEach(lang => {
         output.push({
@@ -39,7 +39,7 @@ exports.styleLoaders = function() {
     return output;
 };
 // options of vue-loader
-exports.vueLoaderOptions = function() {
+exports.vueLoaderOptions = function () {
     var options = {
         loaders: {}
     };

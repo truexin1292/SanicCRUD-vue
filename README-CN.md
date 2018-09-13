@@ -258,4 +258,6 @@ Webpack提供了一整套前端工程自动化的解决方案
                ██
 
 ```
-
+```$xslt
+ pip3 install -r requirements.txt
+```

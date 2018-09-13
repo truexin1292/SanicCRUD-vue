@@ -30,16 +30,14 @@
     </el-dialog>
 </template>
 
-
 <script>
     export default {
-        data(){
+        data() {
             return {
                 formLabelWidth: '120px',
             }
         },
         props: ['dialogFormVisible', 'form'],
-
         methods: {
             updateForm: function (formName) {
                 let itemId = formName.id;

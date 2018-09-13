@@ -17,7 +17,7 @@ server.listen(config.dev.port, "0.0.0.0");
 var url = `http://localhost:${config.dev.port}/`;
 var opn = require('opn');
 // auto start brower
-server.middleware.waitUntilValid(function() {
+server.middleware.waitUntilValid(function () {
     console.log(`> Listening at ${url}`);
     opn(`${url}`);
 })

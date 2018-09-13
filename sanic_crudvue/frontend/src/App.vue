@@ -8,18 +8,13 @@
             <el-col :span="20" class="content">
                 <db-filterinput></db-filterinput>
                 <db-table></db-table>
-
             </el-col>
-
-
         </el-row>
-
         <el-row>
             <el-col :span="24">
                 <footer class="footer">
                     <db-footer></db-footer>
                 </footer>
-
             </el-col>
         </el-row>
     </div>
@@ -27,7 +22,7 @@
 
 <script>
 
-    import DbHeader  from './components/DbHeader.vue'
+    import DbHeader from './components/DbHeader.vue'
     import DbSidebar from './components/DbSidebar.vue'
     import DbFilterinput from './components/DbFilterinput.vue'
     import DbTable from './components/DbTable.vue'
@@ -37,7 +32,8 @@
     export default {
         name: 'app',
         components: {
-            ElRow, DbHeader,
+            ElRow,
+            DbHeader,
             DbSidebar,
             DbFilterinput,
             DbTable,

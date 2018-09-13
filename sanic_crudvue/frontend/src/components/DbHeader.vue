@@ -1,7 +1,7 @@
 <template>
     <header style="background-color: rgb(10, 47, 88);">
         <div class="text-logo">{{msg}}</div>
-        <p class="meta">This demo project for express new develop practice demo.</p>
+        <p class="meta">SanicCRUD-vue demo revise by truexin!</p>
         <ul class="header-operations">
         </ul>
     </header>
@@ -10,7 +10,7 @@
 <script>
     export default {
         name: 'db-header',
-        data () {
+        data() {
             return {
                 msg: 'SanicCRUD-vue'
             }
@@ -35,16 +35,14 @@
         vertical-align: middle;
         border-style: none;
         position: relative;
-        top: 26px;
+        top: 15px;
         right: -20px;
         font-size: 25px;
         color: white;
-
     }
 
     .meta {
         color: #7e95c5;
-        width: 200px;
         display: block;
         margin: -5px 0 0 225px;
         font-weight: 700;

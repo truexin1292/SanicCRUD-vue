@@ -1,25 +1,21 @@
 <template>
     <el-form :inline="true" :model="formInline">
-
-        <el-form-item label="Sex">
-            <el-select v-model="formInline.sex" clearable placeholder="select sex"
+        <el-form-item label="性别">
+            <el-select v-model="formInline.sex" clearable placeholder="请选择性别"
                        v-on:visible-change="selectDemo">
                 <el-option
-                        v-for="item in type_options"
-                        :label="item.label"
-                        :value="item.value">
+                    v-for="item in type_options"
+                    :label="item.label"
+                    :value="item.value">
                 </el-option>
             </el-select>
         </el-form-item>
-
-        <el-form-item v-if='formInline.sex' label="Description">
-            <el-input v-model="formInline.email" placeholder="Please input suffix of email"></el-input>
+        <el-form-item v-if='formInline.sex' label="关键字">
+            <el-input v-model="formInline.email" placeholder="请输入邮箱关键字"></el-input>
         </el-form-item>
-
-        <el-form-item v-else='formInline.sex' label="Description">
-            <el-input v-model="formInline.email" disabled placeholder="Please input suffix of email"></el-input>
+        <el-form-item v-else='formInline.sex' label="关键字">
+            <el-input v-model="formInline.email" disabled placeholder="请输入邮箱关键字"></el-input>
         </el-form-item>
-
     </el-form>
 </template>
 
@@ -39,12 +35,10 @@
                 formLabelWidth: '120px'
             }
         },
-
         watch: {
             'formInline.sex': 'filterResultData',
             'formInline.email': 'filterResultData'
         },
-
         methods: {
             selectDemo: function (params) {
                 if (params) {
@@ -56,7 +50,6 @@
                         console.log(response)
                     });
                 }
-
             },
             filterResultData: _.debounce(
                 function () {
@@ -73,12 +66,9 @@
                     }).catch(function (response) {
                         console.log(response)
                     });
-
                 },
                 500
             ),
         }
     }
-
-
 </script>

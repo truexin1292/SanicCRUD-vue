@@ -5,14 +5,14 @@ proj_server := "app.py"
 proj_path := $(shell pwd)
 
 install:
-		pip install  -r requirements.txt
+		pip3 install  -r requirements.txt
 
 clean:
 		find . -name \*.pyc -delete
 
 dev:
 		cd $(proj_path)/sanic_crudvue && \
-		python $(proj_server)
+		python3 $(proj_server)
 
 test:
 		cd $(proj_path)/sanic_crudvue && \
